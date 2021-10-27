@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+}
+html{
+    height: 100%;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+main{
+    flex: 1 0 auto;
+    
+}
+._container{
+    max-width: 1200px;
+    margin: 0 auto;
+    height: 100%;
+}
+
+/* ------ FORMS -------*/
+form{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+.form_field{
+    background-color: aquamarine;
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.form_field_error{
+    background-color: rgb(225, 89, 89);
+    margin: 5px;
+    border: 1px solid #000;
+    border-radius: 3px;
+}
+.form_label{
+    margin: 5px;
+}
+.form__submit{
+    max-width: 100px;
+    margin: 0 auto;
+}
+
+/* ------ HEADER ------- */
+header{
+    background: linear-gradient(45deg, rgb(210, 210, 210), rgb(242, 115, 115));
+    height: 50px;
+}
+.header__logo img{
+    height: 100%;
+    
+}
+.header__logo{
+    height: 90%;
+}
+.header__content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+.header__link{
+    text-decoration: none;
+    margin: auto 10px;
+    color: wheat;
+    font-weight: 500;
+}
+
+/* -------- profile --------- */
+.main__profile{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile__left{
+    background-color: rgb(235, 102, 102);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile__right{
+    background-color: rgb(228, 239, 29);
+    width: 60%;
+}
+.profile__avatar img{
+    width: 100%;
+}
+
+/* ---------- MAIN ------------*/
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-items: center;
+    max-width: 500px;
+}
+.main__title{
+    font-weight: 600;
+}
+
+table{
+    width: 1000px;
+}
+
+td{
+    border: 1px solid #000;
+}
+
+.pb_table{
+    display: flex;
+    justify-content: center;
+}
+
+
+/* -------- MEDIA ----------------*/
+
+@media(max-width: 450px){
+    ._container{
+        max-width: 300px;
+    }
+}

@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="main_admin">
+        {% for line in user_table %}
+            {{line.username}} {{line.email}}
+        <br>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}} | Test Site</title>
+    <link rel="stylesheet" href="../static/css/style.css" >
+</head>
+<body>
+    <header>
+        <div class="_container">
+            <div class="header__content">
+                <div class="header__logo">
+                    <a href="{{ url_for('index') }}" class="logo__link">
+                        <img src="../static/images/bear_logo.webp" alt="" class="header_img">
+                    </a>
+                    
+                </div>
+                <div class="header__links">
+                    <a href="{{ url_for('index') }}" class="header__link">Главная</a>
+                    {% if current_user.username %}
+                    <a href="{{ url_for('pp.personalpage', id = current_user.id) }}" class="header__link">{{current_user.username}}</a>
+                    <a href="{{ url_for('logreg.logout') }}" class="header__link">Выйти</a>
+                    {% else %}
+                    <a href="{{ url_for('logreg.login') }}" class="header__link">Авторизация</a>
+                    {% endif %}
+                    
+                </div>
+            </div>
+        </div>
+        
+    </header>
+    <main>
+        <div class="_container">
+            
+                {% block content %}
+                {% endblock %}
+            
+            
+        </div>
+    </main>
+    <footer>
+        <div class="_container">
+            <h2>footer of {{title}}</h2>
+        </div>
+        
+    </footer>
+
+</body>
+</html>

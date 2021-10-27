@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="main__profile">
+        <div class="profile__left">
+            <div class="profile__avatar">
+                <img src="../../static/images/empty.png" alt="">
+            </div>
+            <div class="profile__links">
+                <a href="https://vk.com" class="profile__link">VK</a>
+            </div>
+        </div>
+        <div class="profile__right">
+            <div class="profile__about">
+                <div>{{user.username}}</div>
+                <div>{{user.email}}</div>
+                {% if data.first_name %}
+                <div>{{data.first_name}}</div>
+                {% endif %}
+                {% if data.last_name %}
+                <div>{{data.last_name}}</div>
+                {% endif %}
+            </div>
+            {% if check %}
+            <a href="{{ url_for('pp.edit') }}" class="profile__edit">Изменить</a>
+            {% endif %}
+        </div>
+    </div>
+    
+{% endblock %}
